@@ -12,7 +12,7 @@ from string import Template
 def localshop_install():
     """Installs localshop in preexisting virtualenv"""
     version = os.environ['LOCALSHOP_VERSION']
-    local("pip install localshop=={0}".format(version))
+    local("pip install git+https://github.com/mvantellingen/localshop.git")
     local("pip install MySQL-python")
 
 
